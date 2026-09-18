@@ -1,0 +1,25 @@
+{
+  "name": "筋トレノート — 予定・記録・分析",
+  "short_name": "筋トレノート",
+  "description": "筋トレの前・最中・後をまるごと支えるアプリ。メニュー自動決定、体調に合わせた負荷調整、高速記録、レストタイマー、進捗分析。",
+  "lang": "ja",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b0d11",
+  "theme_color": "#0b0d11",
+  "categories": ["health", "fitness", "lifestyle"],
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "今日のメニュー", "url": "./#/home" },
+    { "name": "記録する", "url": "./#/session" },
+    { "name": "分析", "url": "./#/stats" }
+  ]
+}
