@@ -341,26 +341,27 @@ main {
 .input:focus { outline: 2px solid color-mix(in srgb, var(--accent) 55%, transparent); outline-offset: -1px; }
 textarea.input { resize: vertical; min-height: 72px; }
 select.input { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--text-faint) 50%), linear-gradient(135deg, var(--text-faint) 50%, transparent 50%); background-position: right 15px center, right 10px center; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; padding-right: 30px; }
-.field-row { display: flex; gap: 10px; }
-.field-row > * { flex: 1; min-width: 0; }
+/* 狭い画面では自動的に折り返す。3つ並べると入力欄が潰れてしまうため。 */
+.field-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.field-row > * { flex: 1 1 148px; min-width: 0; }
 
-.stepper { display: flex; align-items: center; gap: 6px; }
+.stepper { display: flex; align-items: center; gap: 5px; min-width: 0; }
 .step-btn {
-  width: 42px; height: 42px; flex: 0 0 42px;
+  width: 40px; height: 42px; flex: 0 0 40px;
   border-radius: 12px; border: 1px solid var(--border);
   background: var(--surface-2); color: var(--text);
-  font-size: 20px; font-weight: 600; line-height: 1;
+  font-size: 19px; font-weight: 600; line-height: 1;
   display: flex; align-items: center; justify-content: center;
 }
 .step-btn:active { transform: scale(.9); background: var(--surface-3); }
-.step-field { flex: 1; position: relative; display: block; }
+.step-field { flex: 1 1 auto; min-width: 0; position: relative; display: block; }
 .step-field input {
-  width: 100%; text-align: center; padding: 11px 26px 11px 8px;
+  width: 100%; min-width: 0; text-align: center; padding: 11px 24px 11px 6px;
   background: var(--surface-2); border: 1px solid var(--border);
-  border-radius: 12px; font-size: 17px; font-weight: 700;
+  border-radius: 12px; font-size: 16px; font-weight: 700;
   font-variant-numeric: tabular-nums;
 }
-.step-suffix { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 12px; color: var(--text-faint); pointer-events: none; }
+.step-suffix { position: absolute; right: 7px; top: 50%; transform: translateY(-50%); font-size: 11px; color: var(--text-faint); pointer-events: none; }
 
 .opt-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(72px, 1fr)); gap: 7px; }
 .opt {

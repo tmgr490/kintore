@@ -333,8 +333,8 @@ function openGym(ctx, gymId) {
       ${PLATE_SIZES.map(w => {
         const p = g.plates.find(x => Number(x.w) === w);
         return `<div class="row between" style="padding:6px 0;border-bottom:1px solid var(--border-soft)">
-          <span style="font-weight:700;width:64px"><i style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${plateColor(w)};margin-right:6px"></i>${w}kg</span>
-          <div class="grow" style="max-width:190px">${stepper({ name: `plate_${w}`, value: p?.count || 0, step: 2, min: 0, max: 20, suffix: '枚' })}</div>
+          <span style="font-weight:700;white-space:nowrap"><i style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${plateColor(w)};margin-right:6px"></i>${w}kg</span>
+          <div class="grow" style="max-width:186px;min-width:0">${stepper({ name: `plate_${w}`, value: p?.count || 0, step: 2, min: 0, max: 20, suffix: '枚' })}</div>
         </div>`;
       }).join('')}
 
